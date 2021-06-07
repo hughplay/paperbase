@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+    database:
+        container_name: mongodb
+        image: mongo:latest
+        restart: always
+        hostname: mongo
+        volumes:
+            - ./data/mongodb:/data/db
+        ports:
+            - 27017:27017
